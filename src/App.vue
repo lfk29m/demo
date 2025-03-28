@@ -2,7 +2,7 @@
  * @Author: kevin Kevin_Su@systemweb.com.tw
  * @Date: 2025-03-27 15:43:29
  * @LastEditors: kevin Kevin_Su@systemweb.com.tw
- * @LastEditTime: 2025-03-28 12:03:10
+ * @LastEditTime: 2025-03-28 12:08:10
  * @FilePath: \demo\src\App.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -12,10 +12,12 @@ import { onMounted, ref } from "vue";
 const input = ref("");
 const sysToken = ref("");
 
+console.warn('version', '1.0')
+
 const callApi = async () => {
   try {
     const response = await fetch(
-      "https://zurichapiuat-api-staging-d2awcmfxhmedg9a4.southeastasia-01.azurewebsites.net/api/v1/Auth/entry",
+      "https://zurichapiuat-hdd8ejd7hfeeeea6.southeastasia-01.azurewebsites.net/api/v1/Auth/entry",
       {
         method: "POST",
         body: JSON.stringify({
